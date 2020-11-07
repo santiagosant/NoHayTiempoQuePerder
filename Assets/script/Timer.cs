@@ -11,15 +11,40 @@ public class Timer : MonoBehaviour
 
     public TMPro.TextMeshProUGUI timer;
 
+    public GameObject seTerminoElTiempo;
+
     void Start()
     {
         timer.text = tiempoInicial.ToString();
         tiempoActual = tiempoInicial;
+        Time.timeScale = 1f;
     }
 
     void Update()
     {
-        tiempoActual = tiempoActual - Time.deltaTime;
-        timer.text = tiempoActual.ToString("f3");
+        CuentaRegresiva();
+
+    }
+
+    void CuentaRegresiva()
+    {
+        if (tiempoActual > 0) {
+
+            tiempoActual = tiempoActual - Time.deltaTime;
+            timer.text = tiempoActual.ToString("f3");
+
+        }
+        else
+        {
+            timer.text = "00.000";
+            SeAcaboElTiempo();
+        }
+        
+    }
+
+    void SeAcaboElTiempo()
+    {
+        seTerminoElTiempo.SetActive(true);
+        Time.timeScale = (seTerminoElTiempo) ? 0 : 1f;
     }
 }
