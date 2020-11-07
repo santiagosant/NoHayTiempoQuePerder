@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     bool isSuelo;
 
     public GameObject nivelTerminado;
+    public Timer timer;
+
+    public TMPro.TextMeshProUGUI PuntajeActual;
+    public TMPro.TextMeshProUGUI PuntajeMax;
 
     void Start()
     {
@@ -66,7 +70,9 @@ public class PlayerController : MonoBehaviour
 
             nivelTerminado.SetActive(true);
             Time.timeScale = 0f;
-            
+            timer.SaveScore();
+            PuntajeMax.text = timer.GetMaxScrore().ToString();
+            PuntajeActual.text = timer.puntajeActual().ToString();
         }
     }
 }

@@ -250,7 +250,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Mejor Puntaje:'
+  m_Text: 'Mejor Tiempo:'
 --- !u!222 &34137948
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 445147783}
   - component: {fileID: 445147782}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PuntajeMaximo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1485,7 +1485,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Puntaje:'
+  m_Text: 'Tiempo:'
 --- !u!222 &1041026594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1878,7 +1878,7 @@ GameObject:
   - component: {fileID: 1357831861}
   - component: {fileID: 1357831860}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: MiPuntaje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2778,9 +2778,25 @@ PrefabInstance:
       propertyPath: nivelTerminado
       value: 
       objectReference: {fileID: 1920395461}
+    - target: {fileID: 8852935623718595728, guid: 286e0c96102054c4c8be1db82e4db5c4, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 813725748}
+    - target: {fileID: 8852935623718595728, guid: 286e0c96102054c4c8be1db82e4db5c4, type: 3}
+      propertyPath: PuntajeActual
+      value: 
+      objectReference: {fileID: 1357831860}
+    - target: {fileID: 8852935623718595728, guid: 286e0c96102054c4c8be1db82e4db5c4, type: 3}
+      propertyPath: PuntajeMax
+      value: 
+      objectReference: {fileID: 445147782}
     - target: {fileID: 8852935623718597485, guid: 286e0c96102054c4c8be1db82e4db5c4, type: 3}
       propertyPath: m_Name
       value: playerBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852935623718597485, guid: 286e0c96102054c4c8be1db82e4db5c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8852935623718597487, guid: 286e0c96102054c4c8be1db82e4db5c4, type: 3}
       propertyPath: m_LocalPosition.x

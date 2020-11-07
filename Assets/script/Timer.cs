@@ -23,12 +23,12 @@ public class Timer : MonoBehaviour
     void Update()
     {
         CuentaRegresiva();
-
     }
 
     void CuentaRegresiva()
     {
-        if (tiempoActual > 0) {
+        if (tiempoActual > 0)
+        {
 
             tiempoActual = tiempoActual - Time.deltaTime;
             timer.text = tiempoActual.ToString("f3");
@@ -47,4 +47,22 @@ public class Timer : MonoBehaviour
         seTerminoElTiempo.SetActive(true);
         Time.timeScale = (seTerminoElTiempo) ? 0 : 1f;
     }
-}
+
+    public float puntajeActual()
+    {
+        return tiempoInicial - tiempoActual;
+    }
+
+    public float GetMaxScrore()
+    {
+        return PlayerPrefs.GetFloat("Mejor Tiempo", 0);
+    }
+
+    public void SaveScore()
+    {
+        if (puntajeActual() < GetMaxScrore())
+        {
+            PlayerPrefs.SetFloat("Mejor Tiempo", puntajeActual());
+        }
+    }
+}  
