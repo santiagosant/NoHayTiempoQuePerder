@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         //Movimiento
         float movX = Input.GetAxis("Horizontal");
-        rb2d.velocity = new Vector2(velocidad * movX, rb.velocity.y);
+        rb2d.velocity = new Vector2(velocidad * movX, rb2d.velocity.y);
     }
 
     private void OnCollisionEnter2D(Collision2D col)
